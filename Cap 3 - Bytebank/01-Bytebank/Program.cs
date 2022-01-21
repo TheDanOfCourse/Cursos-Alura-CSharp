@@ -1,9 +1,5 @@
 ﻿using ByteBank.Funcionarios;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ByteBank
 {
@@ -16,6 +12,9 @@ namespace ByteBank
             Funcionario carlos = new Funcionario("546.879.157-20");
             carlos.Nome = "Carlos";
             carlos.Salario = 2000;
+
+            carlos.AumentarSalario();
+            Console.WriteLine(carlos.Salario);
             Console.WriteLine(Funcionario.TotalDeFuncionarios);
             gerenciador.Registrar(carlos);
 
