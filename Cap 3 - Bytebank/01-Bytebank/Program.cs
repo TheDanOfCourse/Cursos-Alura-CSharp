@@ -14,7 +14,7 @@ namespace ByteBank
             carlos.Salario = 2000;
 
             carlos.AumentarSalario();
-            Console.WriteLine(carlos.Salario);
+            Console.WriteLine("Novo salario carlos: " + carlos.Salario);
             Console.WriteLine(Funcionario.TotalDeFuncionarios);
             gerenciador.Registrar(carlos);
 
@@ -24,6 +24,9 @@ namespace ByteBank
             Console.WriteLine(Funcionario.TotalDeFuncionarios);
 
             Funcionario robertaTeste = roberta;
+
+            roberta.AumentarSalario();
+            Console.WriteLine("Novo salario roberta: " + roberta.Salario);
 
             Console.WriteLine("Bonificacao de uma referencia de Diretor: " + roberta.GetBonificacao());
             Console.WriteLine("Bonificacao de uma referencia de Funcionario: " + robertaTeste.GetBonificacao());
