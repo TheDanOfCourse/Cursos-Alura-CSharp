@@ -6,29 +6,25 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Funcionarios
 {
-    public class Funcionario
+    //abstract makes it private to be called only in its inheritances
+    public abstract class Funcionario
     {
         public static int TotalDeFuncionarios { get; private set; }
         public string Nome { get; set; }
         public string CPF { get; private set; }
-        public double Salario { get; private set; }
+        public double Salario { get; protected set; }
 
         public Funcionario(double salario, string cpf)
         {
-            Console.WriteLine("Criando Funcionario");
             CPF = cpf;
             Salario = salario;
             TotalDeFuncionarios++;
         }
 
-        public virtual void AumentarSalario()
-        {
-            Salario *= 1.1;
-        }
+        //abstract in this case makes it mandatory to override the methods 
+        public abstract void AumentarSalario();
 
-        public virtual double GetBonificacao()
-        {
-            return Salario * 0.10;
-        }
+        public abstract double GetBonificacao();
+        
     }
 }
