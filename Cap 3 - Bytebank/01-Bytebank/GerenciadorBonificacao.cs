@@ -1,11 +1,11 @@
-﻿using ByteBank.Funcionarios;
+﻿using _01_ByteBank.Funcionarios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank
+namespace _01_ByteBank
 {
     public class GerenciadorBonificacao
     {
